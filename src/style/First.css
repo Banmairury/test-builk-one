@@ -1,0 +1,26 @@
+.container-first{
+    text-align: center;
+    position: relative;
+   
+}
+input{
+    height: 35px;
+    width: 300px;
+    font-size: 1.5rem;
+}
+
+.container-first.error input{
+    border-color: red;
+   
+}
+.container-first.success input{
+    border-color: rgb(0, 194, 65);
+   
+}
+.container-first small{
+    color: red;
+    position: absolute;
+    bottom: 10;
+    left: 200px;
+    visibility: hidden;
+}
