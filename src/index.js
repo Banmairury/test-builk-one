@@ -8,7 +8,8 @@ import "./index.css";
 import First from "./components/First";
 import Second from "./components/Second";
 import Third from "./components/Third";
-import Four from "./components/four";
+import SecondV2 from "./components/SecondV2";
+
 
 
 
@@ -30,8 +31,8 @@ const router = createBrowserRouter([
     element: <Third/>,
   },
   {
-    path: "/four",
-    element: <Four/>,
+    path: "/second2",
+    element: <SecondV2/>,
   },
 ]);
 

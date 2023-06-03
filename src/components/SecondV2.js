@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import Layout from "./Layout";
 import "../style/Second.css";
 
-const Four = () => {
+const SecondV2 = () => {
   const [one, setOne] = useState();
   const [two, setTwo] = useState();
   const [three, setThree] = useState();
@@ -32,26 +32,24 @@ const Four = () => {
 
     const operator = ["+", "-", "*", "/"];
 
-    function generateOperatorCombinations() {
+    //function สร้าง String (6*3+4+2)
+    const generateOperatorCombinations = () => {
       const combinations = [];
-
       for (let i = 0; i < operator.length; i++) {
         for (let j = 0; j < operator.length; j++) {
-          for (let k = 0; k < operator.length; k++) {combinations.push([numArr[0],operator[i],numArr[1],operator[j],numArr[2],operator[k],numArr[3],]);
-          }
+          for (let k = 0; k < operator.length; k++)
+           {combinations.push([numArr[0],operator[i],numArr[1],operator[j],numArr[2],operator[k],numArr[3]])}
         }
       }
       return combinations;
     }
 
     const operatorCombinations = generateOperatorCombinations();
-    const combinationsAsNumber = operatorCombinations.map((combination) =>eval(combination.join("")));
-    const combinationsAsString = operatorCombinations.map((combination) =>combination.join(""));
+    const combinationsAsNumber = operatorCombinations.map((combination) =>eval(combination.join("")));//รวมค่า
+    const combinationsAsString = operatorCombinations.map((combination) =>combination.join(""));//string วิธีหาค่า
 
     const calculate = (value, solutionExpression) => {
       if (value === 24) {
-        console.log(value);
-        console.log(solutionExpression);
         setSolution(solutionExpression);
         return true;
       }
@@ -89,4 +87,4 @@ const Four = () => {
   );
 };
 
-export default Four;
+export default SecondV2;
